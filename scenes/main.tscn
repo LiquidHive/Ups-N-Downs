@@ -1,0 +1,200 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scripts/main.gd" type="Script" id=1]
+[ext_resource path="res://fonts/costa_rica.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/add_info.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/data_list.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/group_list.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/create_group.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/del_group.tscn" type="PackedScene" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 56
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 176.0, 224.0, 16.0, 96.0, 176.0, 272.0 ],
+"_edit_vertical_guides_": [ 16.0, 240.0, 496.0, 736.0, 976.0, 1117.0, 1136.0, 1264.0, 256.0, 96.0, 272.0, 288.0, 479.0, 688.0, 704.0, 80.0, 64.0, 192.0, 944.0 ]
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Title" type="Label" parent="Panel"]
+anchor_right = 1.0
+margin_top = 16.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 3 )
+text = "Contact Manager
+"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Add" type="Button" parent="Panel"]
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 80.0
+margin_bottom = 160.0
+text = "ADD"
+
+[node name="Refresh" type="Button" parent="Panel"]
+margin_left = 96.0
+margin_top = 96.0
+margin_right = 272.0
+margin_bottom = 160.0
+text = "REFRESH"
+
+[node name="CreateGroup" type="Button" parent="Panel"]
+margin_left = 288.0
+margin_top = 96.0
+margin_right = 480.0
+margin_bottom = 160.0
+text = "ADD GROUP"
+
+[node name="DeleteGroup" type="Button" parent="Panel"]
+margin_left = 496.0
+margin_top = 96.0
+margin_right = 688.0
+margin_bottom = 160.0
+text = "DEL GROUP"
+
+[node name="SortBy" type="Button" parent="Panel"]
+margin_left = 704.0
+margin_top = 96.0
+margin_right = 976.0
+margin_bottom = 160.0
+text = "SORT BY: NAME"
+
+[node name="FavLabel" type="Label" parent="Panel"]
+margin_left = 16.0
+margin_top = 176.0
+margin_right = 64.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 5
+size_flags_stretch_ratio = 0.01
+text = "Ft"
+valign = 1
+uppercase = true
+
+[node name="NameLabel" type="Label" parent="Panel"]
+margin_left = 68.0
+margin_top = 176.0
+margin_right = 313.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.1
+text = "NAME"
+valign = 1
+uppercase = true
+
+[node name="TelephoneLabel" type="Label" parent="Panel"]
+margin_left = 320.0
+margin_top = 176.0
+margin_right = 560.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.11
+text = "Telephone"
+valign = 1
+uppercase = true
+
+[node name="TownLabel" type="Label" parent="Panel"]
+margin_left = 560.0
+margin_top = 176.0
+margin_right = 811.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.1
+text = "Town"
+valign = 1
+uppercase = true
+
+[node name="GroupLabel" type="Label" parent="Panel"]
+margin_left = 816.0
+margin_top = 176.0
+margin_right = 1056.0
+margin_bottom = 224.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.1
+text = "group"
+valign = 1
+uppercase = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 224.0
+margin_right = -16.0
+margin_bottom = -16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+margin_right = 1248.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+margin_right = 1248.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 5
+
+[node name="AddInfo" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="DataList" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="GroupList" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="CreateGroup" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="DelGroup" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 640, 360 )
+scale = Vector2( 64, 36 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[editable path="AddInfo"]

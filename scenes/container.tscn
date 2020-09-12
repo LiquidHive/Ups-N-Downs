@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://fonts/costa_rica.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/container.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -624.0
+margin_top = -32.0
+margin_right = -656.0
+margin_bottom = -688.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="Favourite" type="TextureRect" parent="."]
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.0
+
+[node name="Name" type="LineEdit" parent="."]
+margin_left = 4.0
+margin_right = 259.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 15
+editable = false
+placeholder_text = "PersonName"
+
+[node name="Telephone" type="LineEdit" parent="."]
+margin_left = 263.0
+margin_right = 518.0
+margin_bottom = 64.0
+focus_mode = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 0
+max_length = 23
+editable = false
+focus_mode = 1
+placeholder_text = "Telephone"
+caret_blink = true
+
+[node name="Town" type="LineEdit" parent="."]
+margin_left = 522.0
+margin_right = 777.0
+margin_bottom = 64.0
+focus_mode = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 15
+max_length = 23
+editable = false
+focus_mode = 1
+placeholder_text = "Town"
+caret_blink = true
+
+[node name="Group" type="LineEdit" parent="."]
+margin_left = 781.0
+margin_right = 1036.0
+margin_bottom = 64.0
+focus_mode = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 0
+max_length = 23
+editable = false
+focus_mode = 1
+placeholder_text = "Group"
+caret_blink = true
+
+[node name="MoreInfo" type="Button" parent="."]
+margin_left = 1040.0
+margin_right = 1142.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.04
+text = "More"
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 1146.0
+margin_right = 1244.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.01
+text = "Delete"
+[connection signal="pressed" from="MoreInfo" to="." method="_on_MoreInfo_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]

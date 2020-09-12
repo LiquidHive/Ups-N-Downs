@@ -1,0 +1,165 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://themes/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/add_info.gd" type="Script" id=2]
+[ext_resource path="res://fonts/costa_rica.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/costa_rica.otf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 52
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="AddInfo" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 704.0, 640.0 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 832.0, 1024.0, 1040.0, 1120.0, 1136.0, 1264.0, 16.0, 640.0 ]
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 16.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 2 )
+text = "Add Information"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Name" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -224.0
+margin_right = -464.0
+margin_bottom = -176.0
+placeholder_text = "Name"
+caret_blink = true
+
+[node name="Address" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -160.0
+margin_right = -16.0
+margin_bottom = -112.0
+placeholder_text = "Address"
+caret_blink = true
+
+[node name="Telephone" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 832.0
+margin_top = -224.0
+margin_right = -16.0
+margin_bottom = -176.0
+placeholder_text = "Telephone"
+caret_blink = true
+
+[node name="Description" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -32.0
+margin_right = -16.0
+margin_bottom = 16.0
+max_length = 96
+placeholder_text = "Description"
+
+[node name="Town" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -96.0
+margin_right = -16.0
+margin_bottom = -48.0
+placeholder_text = "Town"
+caret_blink = true
+
+[node name="Group" type="Button" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 32.0
+margin_right = -16.0
+margin_bottom = 81.0
+text = "SELECT GROUP"
+
+[node name="FavCombo" type="Control" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 96.0
+margin_right = -1224.0
+margin_bottom = 144.0
+
+[node name="Favourite" type="Label" parent="FavCombo"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -24.0
+margin_right = 104.0
+margin_bottom = 24.0
+text = "Favourite:"
+valign = 1
+
+[node name="FavouriteToggle" type="Button" parent="FavCombo"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 144.0
+margin_top = -24.0
+margin_right = 224.0
+margin_bottom = 24.0
+custom_fonts/font = SubResource( 3 )
+text = "NO"
+
+[node name="Add" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -240.0
+margin_top = -80.0
+margin_right = -160.0
+margin_bottom = -16.0
+text = "ADD"
+
+[node name="CreateGroup" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -448.0
+margin_top = -80.0
+margin_right = -256.0
+margin_bottom = -16.0
+text = "ADD GROUP"
+
+[node name="Cancel" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -144.0
+margin_top = -80.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "CANCEL"

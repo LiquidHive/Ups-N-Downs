@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://themes/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/create_group.gd" type="Script" id=2]
+[ext_resource path="res://fonts/costa_rica.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 52
+font_data = ExtResource( 3 )
+
+[node name="CreateGroup" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 704.0, 640.0 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 1264.0, 1136.0, 1120.0, 1024.0 ]
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 16.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 1 )
+text = "CREATE GROUP"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Group" type="LineEdit" parent="."]
+anchor_right = 1.0
+margin_left = 112.0
+margin_top = 96.0
+margin_right = -16.0
+margin_bottom = 149.0
+max_length = 15
+placeholder_text = "Group"
+caret_blink = true
+
+[node name="Save" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = -80.0
+margin_right = -160.0
+margin_bottom = -16.0
+text = "SAVE"
+
+[node name="Cancel" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -144.0
+margin_top = -80.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "CANCEL"
+
+[node name="GroupString" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 16.0
+margin_top = 96.0
+margin_right = -1168.0
+margin_bottom = 144.0
+text = "Group:"
+valign = 1

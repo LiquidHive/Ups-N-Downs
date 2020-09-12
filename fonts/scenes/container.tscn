@@ -1,0 +1,222 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/costa_rica.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/container.gd" type="Script" id=2]
+[ext_resource path="res://assets/graphics/unfavourite.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+
+default_font = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -624.0
+margin_top = -32.0
+margin_right = -656.0
+margin_bottom = -688.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.0
+theme = SubResource( 2 )
+alignment = 0
+script = ExtResource( 2 )
+
+[node name="Favourite" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 48.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="Name" type="LineEdit" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 52.0
+margin_right = 297.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 15
+editable = false
+focus_mode = 2
+context_menu_enabled = true
+placeholder_text = "PersonName"
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="Telephone" type="LineEdit" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 301.0
+margin_right = 546.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 1
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 0
+max_length = 23
+editable = false
+focus_mode = 1
+context_menu_enabled = true
+placeholder_text = "Telephone"
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="Town" type="LineEdit" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 550.0
+margin_right = 795.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 1
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 15
+max_length = 23
+editable = false
+focus_mode = 1
+context_menu_enabled = true
+placeholder_text = "Town"
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="Group" type="LineEdit" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 799.0
+margin_right = 1044.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 1
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+custom_constants/minimum_spaces = 0
+max_length = 23
+editable = false
+focus_mode = 1
+context_menu_enabled = true
+placeholder_text = "Group"
+placeholder_alpha = 0.6
+caret_blink = true
+caret_blink_speed = 0.65
+caret_position = 0
+
+[node name="MoreInfo" type="Button" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1048.0
+margin_right = 1146.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.04
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "More"
+flat = false
+align = 1
+
+[node name="Delete" type="Button" parent="." index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1150.0
+margin_right = 1248.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.01
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Delete"
+flat = false
+align = 1
+
+[connection signal="pressed" from="MoreInfo" to="." method="_on_MoreInfo_pressed"]
+
+[connection signal="pressed" from="Delete" to="." method="_on_Delete_pressed"]
+
+

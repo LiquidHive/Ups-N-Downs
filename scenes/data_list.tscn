@@ -1,0 +1,174 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://themes/theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/data_list.gd" type="Script" id=2]
+[ext_resource path="res://fonts/costa_rica.otf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 52
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 3 )
+
+[node name="DataList" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 80.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 704.0, 640.0 ],
+"_edit_lock_": true,
+"_edit_vertical_guides_": [ 1264.0, 1136.0, 1120.0, 1024.0, 1008.0, 912.0, 832.0, 816.0, 640.0, 16.0 ]
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 16.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 1 )
+text = "Contact Information"
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Name" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -224.0
+margin_right = -464.0
+margin_bottom = -176.0
+editable = false
+placeholder_text = "Name"
+caret_blink = true
+
+[node name="Address" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -160.0
+margin_right = -16.0
+margin_bottom = -107.0
+editable = false
+placeholder_text = "Address"
+caret_blink = true
+
+[node name="Telephone" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 832.0
+margin_top = -224.0
+margin_right = -16.0
+margin_bottom = -176.0
+editable = false
+placeholder_text = "Telephone"
+caret_blink = true
+
+[node name="Description" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -32.0
+margin_right = -16.0
+margin_bottom = 21.0
+max_length = 96
+editable = false
+placeholder_text = "Description"
+caret_blink = true
+
+[node name="Town" type="LineEdit" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = -96.0
+margin_right = -16.0
+margin_bottom = -43.0
+editable = false
+placeholder_text = "Town"
+caret_blink = true
+
+[node name="Group" type="Button" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 32.0
+margin_right = -16.0
+margin_bottom = 81.0
+disabled = true
+text = "SELECT GROUP"
+
+[node name="FavCombo" type="Control" parent="."]
+editor/display_folded = true
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 96.0
+margin_right = -1224.0
+margin_bottom = 144.0
+
+[node name="Favourite" type="Label" parent="FavCombo"]
+margin_right = 144.0
+margin_bottom = 48.0
+text = "Favourite:"
+valign = 1
+
+[node name="FavouriteToggle" type="Button" parent="FavCombo"]
+margin_left = 144.0
+margin_right = 224.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 2 )
+text = "NO"
+
+[node name="CreateGroup" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -576.0
+margin_top = -80.0
+margin_right = -384.0
+margin_bottom = -16.0
+text = "ADD GROUP"
+
+[node name="Save" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -368.0
+margin_top = -80.0
+margin_right = -272.0
+margin_bottom = -16.0
+text = "SAVE"
+
+[node name="Edit" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -256.0
+margin_top = -80.0
+margin_right = -160.0
+margin_bottom = -16.0
+text = "EDIT"
+
+[node name="Cancel" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -144.0
+margin_top = -80.0
+margin_right = -16.0
+margin_bottom = -16.0
+text = "CANCEL"
